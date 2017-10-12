@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      USER PROFILE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content *ngIf='userReady'>
+  <ion-card>
+    <img [src]="user.picture"/>
+    <ion-card-content>
+      <ion-card-title>
+        Welcome {{user.name}}!
+        </ion-card-title>
+      <p>
+        Your gender is: {{user.gender}}
+      </p>
+      <p>
+        Your email is: {{user.email}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col>
+      <button ion-button block (click)="doFbLogout()">Logout</button>
+    </ion-col>
+  </ion-row>
+</ion-content>
